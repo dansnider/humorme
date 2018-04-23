@@ -15,6 +15,14 @@ app.post('/createEvent', (req, res) => {
 	.then(() => res.sendStatus(200));
 });
 
+// show all events
+app.get('/showEvents', (req, res) => {
+	store.allEvents()
+	.then(function(data) {
+		res.send(data);
+	});
+});
+
 app.listen(7555, () => {
 	console.log('Server running on http://localhost:7555');
-})
+});

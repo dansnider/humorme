@@ -7,5 +7,8 @@ module.exports = {
 			name,
 			location
 		});
+	},
+	allEvents() {
+		return knex('event')
 	}
 }
